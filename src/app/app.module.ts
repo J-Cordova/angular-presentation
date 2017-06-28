@@ -10,7 +10,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import {DialogComponent} from './dialog/dialog.component';
 
-//hello
 @NgModule({
   declarations: [
     AppComponent,
