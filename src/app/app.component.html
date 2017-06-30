@@ -27,10 +27,12 @@
       </md-tab-group>-->
 
     </md-sidenav>
+
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
 
       <md-card fxFlex="80">
-        <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
+        <!--<md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>-->
+            <img style="height: 7rem; width: 7rem" class="logo-image" src="./assets/Gaia.png">
         <h2>{{selectedUser.name}}</h2>
         <p>{{selectedUser.details}}</p>
       </md-card>

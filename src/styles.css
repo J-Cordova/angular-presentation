@@ -9,3 +9,13 @@ html, body {
   margin: 0;
   height: 100%;
 }
+
+
+ .md-button.logo {
+   height: 7rem;
+   width: 7rem;
+ }
+ .logo-image {
+   height: 100%;
+   width: 100%;
+ }

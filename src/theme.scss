@@ -11,8 +11,8 @@ $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
 
 .dark-theme {
-  $dark-primary: mat-palette($mat-light-blue);
-  $dark-accent: mat-palette($mat-light-blue);
+  $dark-primary: mat-palette($mat-indigo);
+  $dark-accent: mat-palette($mat-indigo);
 
   $dark-theme: mat-dark-theme($dark-primary, $dark-accent);
 
