@@ -9,44 +9,39 @@ export class AnimalService {
 constructor() { }
 
 
-getDogs(): Observable<Array<Animal>>
+getAnimals(): Observable<Array<Animal>>
 {
   return Observable.of(this.animals);
 }
 
-// tslint:disable-next-line:member-ordering
 private animals: Array<Animal> = [
     {
       Name: 'Gaia',
-      Picture: '../../assets/Gaia.png',
-      Description: '',
-      Type: AnimalType.Dog
+      Picture: '../../assets/GaiaSleep.jpg',
+      Description: 'A baby Doberman Pinscher. Loves Naps.',
+      Type: AnimalType.Dog,
+      Avatar: 'Dog'
     },
     {
       Name: 'Sage',
-      Picture: 'svg-12',
-      Description: '',
-      Type: AnimalType.Dog
+      Picture: '../../assets/SageSleep.jpg',
+      Description: 'A 14 week old German Sheperd. Loves the pool.',
+      Type: AnimalType.Dog,
+      Avatar: 'Dog'
     },
     {
       Name: 'Kai',
-      Picture: 'svg-13',
-      Description: '',
-      Type: AnimalType.Cat
+      Picture: '../../assets/KaiCute.jpg',
+      Description: 'A beautiful young kitten. Loves playing with bigger animals.',
+      Type: AnimalType.Cat,
+      Avatar: 'Cat'
     },
     {
       Name: 'Nyx',
-      Picture: 'svg-14',
-      Description: '',
-      Type: AnimalType.Cat
+      Picture: '../../assets/NyxLooking.jpg',
+      Description: 'A beatiful black kitten.  Loves laying on anything warm.',
+      Type: AnimalType.Cat,
+      Avatar: 'Cat'
     }
   ];
-
-
-
-
-
-
-
-
 }

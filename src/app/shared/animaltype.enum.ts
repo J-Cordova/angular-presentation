@@ -1,5 +1,5 @@
 
 export enum AnimalType {
-Dog,
-Cat
+    Dog,
+    Cat
 }

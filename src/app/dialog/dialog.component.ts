@@ -6,4 +6,7 @@ import {MdDialogRef} from '@angular/material';
 })
 export class DialogComponent {
   constructor(public dialogRef: MdDialogRef<DialogComponent>) {}
+
+  avatars: Array<String> = ['Cat', 'Dog'];
+  selectedAvatar = this.avatars[0];
 }

@@ -6,4 +6,5 @@ export class Animal
     Type: AnimalType;
     Picture: String;
     Description: String;
+    Avatar: String;
 }

@@ -1,19 +1,19 @@
-<div fxLayout="column" fxFlex class.dark-theme>
+<div fxLayout="column" fxFlex class="dark-theme">
 
   <md-toolbar color="primary">
     <span>Angular Material</span>
-
     <span fxFlex></span>
-
   </md-toolbar>
 
   <md-sidenav-container fxFlex>
     <md-sidenav mode="side" opened>
 
       <md-nav-list>
-        <md-list-item *ngFor="let user of users" (click)="selectedUser = user">
-          <md-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></md-icon>
-          <span>{{user.name}}</span>
+        <h2 style="text-align:center;">Animals</h2>
+
+        <md-list-item  *ngFor="let animal of animals" (click)="selectedAnimal = animal">
+           <md-icon svgIcon="{{animal.Avatar}}" class="avatar"></md-icon>
+          <h3 style="padding-left: 1em">{{animal.Name}}</h3>
         </md-list-item>
       </md-nav-list>
     </md-sidenav>
@@ -21,20 +21,21 @@
     <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
 
       <md-card fxFlex="50">
-        <!--<md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>-->
-            <img style="height: 7rem; width: 7rem" class="logo-image" src="{{selectedAnimal.Picture}}">
-        <h2>{{selectedAnimal.Name}}</h2>
-        <p>{{selectedAnimal.Description}}</p>
+        <!--<img style="height: 20rem; width: 30rem; padding:3px" class="logo-image" src="{{selectedAnimal.Picture}}">-->
+        <img style="max-width:100%; max-height:100%; " class="" src="{{selectedAnimal.Picture}}">
       </md-card>
 
-      <md-card fxFlex fxLayout="column" fxLayoutGap="14px">
+      <md-card fxFlex="50">
+        <h2>{{selectedAnimal.Name}}</h2>
+        <p>{{selectedAnimal.Type ?  "Cat" : "Dog"}}</p>
+        <p>{{selectedAnimal.Description}}</p>
       </md-card>
 
     </div>
   </md-sidenav-container>
 
-  <!--<button md-fab (click)="openAdminDialog()" class="fab-bottom-right">-->
-  <button md-fab class="fab-bottom-right">
+  
+  <button md-fab (click)="openAdminDialog()" class="fab-bottom-right">
     <md-icon>add</md-icon>
   </button>
 
