@@ -2,16 +2,16 @@ var express = require('express');
 var router = express.Router();
 var animals = [
     {
-      Name: 'Gaia',
-      Picture: '../../assets/GaiaSleep.jpg',
-      Description: 'A baby Doberman Pinscher. Loves Naps.',
+      Name: 'Sage',
+      Picture: '../../assets/SageSleep.jpg',
+      Description: 'A 14 week old German Sheperd. Loves the pool.',
       Type: 0,
       Avatar: 'Dog'
     },
     {
-      Name: 'Sage',
-      Picture: '../../assets/SageSleep.jpg',
-      Description: 'A 14 week old German Sheperd. Loves the pool.',
+      Name: 'Gaia',
+      Picture: '../../assets/GaiaSleep.jpg',
+      Description: 'A baby Doberman Pinscher. Loves Naps.',
       Type: 0,
       Avatar: 'Dog'
     },

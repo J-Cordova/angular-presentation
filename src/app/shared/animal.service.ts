@@ -21,16 +21,16 @@ getAnimals(): Observable<Array<Animal>>
 
 private animals: Array<Animal> = [
     {
-      Name: 'Gaia',
-      Picture: '../../assets/GaiaSleep.jpg',
-      Description: 'A baby Doberman Pinscher. Loves Naps.',
+      Name: 'Sage',
+      Picture: '../../assets/SageSleep.jpg',
+      Description: 'A 14 week old German Sheperd. Loves the pool.',
       Type: AnimalType.Dog,
       Avatar: 'Dog'
     },
     {
-      Name: 'Sage',
-      Picture: '../../assets/SageSleep.jpg',
-      Description: 'A 14 week old German Sheperd. Loves the pool.',
+      Name: 'Gaia',
+      Picture: '../../assets/GaiaSleep.jpg',
+      Description: 'A baby Doberman Pinscher. Loves Naps.',
       Type: AnimalType.Dog,
       Avatar: 'Dog'
     },
