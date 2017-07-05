@@ -2,16 +2,21 @@ import { Injectable } from '@angular/core';
 import { Animal } from './animal.model';
 import { AnimalType } from './animaltype.enum';
 import {Observable} from 'rxjs/Observable';
+import { Http, Response } from '@angular/http';
 
 @Injectable()
 export class AnimalService {
 
-constructor() { }
+constructor(private http: Http) { }
 
 
 getAnimals(): Observable<Array<Animal>>
 {
-  return Observable.of(this.animals);
+  return this.http.get('http://localhost:3000').map(
+    (res: Response) =>
+    res.json()
+    );
+  ///return Observable.of(this.animals);
 }
 
 private animals: Array<Animal> = [

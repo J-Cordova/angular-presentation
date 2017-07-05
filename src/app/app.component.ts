@@ -31,7 +31,7 @@ export class AppComponent
       if (animals.length) this.selectedAnimal = animals[0];
     });
 
-    sub.unsubscribe();
+    //sub.unsubscribe();
   }
 
   onAnimalSelected($event)

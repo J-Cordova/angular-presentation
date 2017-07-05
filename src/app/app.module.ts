@@ -12,6 +12,7 @@ import { AnimalSideNavComponent } from './animal-sidenav/animal-sidenav.componen
 import { AppComponent } from './app.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { AnimalService } from './shared/animal.service';
+import { AnimalSelectedService } from './shared/animal-selected.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { AnimalService } from './shared/animal.service';
     FlexLayoutModule,
     BrowserAnimationsModule,
   ],
-  providers: [AnimalService],
+  providers: [AnimalService, AnimalSelectedService],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
