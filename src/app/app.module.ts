@@ -7,6 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { AnimalSideNavComponent } from './animal-sidenav/animal-sidenav.component';
 import { AppComponent } from './app.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { AnimalService } from './shared/animal.service';
@@ -16,6 +18,8 @@ import { AnimalService } from './shared/animal.service';
   declarations: [
     AppComponent,
     DialogComponent,
+    AnimalSideNavComponent,
+    AnimalDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -10,9 +10,9 @@ export class DialogComponent {
   constructor(public dialogRef: MdDialogRef<DialogComponent>) {}
 
   animal: Animal = new Animal();
-  Type: String = '0';
+  Type: string = '0';
   avatars: Array<String> = ['Dog', 'Cat'];
-  selectedAvatar = this.avatars[0];
+  selectedAvatar = this.avatars[parseInt(this.Type, 10)];
 
   handleAnimalTypeChange($event)
   {

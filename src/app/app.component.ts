@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { MdIconRegistry, MdDialog } from '@angular/material';
 import { Observable, Subscription } from 'rxjs/Rx';
-import {DomSanitizer} from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { DialogComponent } from './dialog/dialog.component';
 import { AnimalFactory } from './shared/animal.factory';
 import { Animal } from './shared/animal.model';
@@ -22,7 +21,6 @@ export class AppComponent
   constructor(private iconRegistry: MdIconRegistry, private sanitizer: DomSanitizer,
               private dialog: MdDialog, private animalService: AnimalService)
   {
-
     this.registerIcons();
 
     const sub: Subscription =  animalService.getAnimals()
@@ -34,6 +32,11 @@ export class AppComponent
     });
 
     sub.unsubscribe();
+  }
+
+  onAnimalSelected($event)
+  {
+    this.selectedAnimal = $event;
   }
 
   openAnimalDialog()
