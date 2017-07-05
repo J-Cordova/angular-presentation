@@ -1,30 +1,28 @@
-<h3>Add User Dialog</h3>
-<form #form="ngForm" (ngSubmit)="dialogRef.close(form.value)" ngNativeValidate>
+<h3>Add Animal</h3>
+<form #form="ngForm" (ngSubmit)="dialogRef.close(animal)" ngNativeValidate>
   <div fxLayout="column" fxLayoutGap="8px">
+
     <div fxLayout="row" fxLayoutAlign="start center">
-
-      <md-icon svgIcon="{{selectedAvatar}}" class="avatar"></md-icon>
-
-      <md-select name="avatar" fxFlex placeholder="Avatar" [(ngModel)]="selectedAvatar">
-        <md-option *ngFor="let avatar of avatars; let i = index;" [value]="avatar">Avatar - {{i + 1}}</md-option>
-      </md-select>
-    </div>
+      <md-icon mdInput svgIcon="{{selectedAvatar}}" class="avatar"></md-icon>
+        <md-select (change)="handleAnimalTypeChange($event)" [(ngModel)]="Type" name="Type" fxFlex >
+          <md-option value="0">Dog</md-option>
+          <md-option value="1">Cat</md-option>
+        </md-select>
+      </div>
 
     <md-input-container>
-      <input mdInput ngModel name="Name" placeholder="Name" required>
+      <input mdInput [(ngModel)]="animal.Name" name="Name" placeholder="Name" required>
     </md-input-container>
 
     <md-input-container>
-      <textarea mdInput ngModel name="Description" placeholder="Details" rows="15" cols="60" required></textarea>
+      <textarea mdInput [(ngModel)]="animal.Description" name="Description"  placeholder="Description" rows="15" cols="60"></textarea>
     </md-input-container>
 
-    <!--<div fxLayout="row" fxLayoutGap="24px">
-      <md-checkbox ngModel name="isAdmin">Is Admin?</md-checkbox>
-      <md-checkbox ngModel name="isCool">Is Cool?</md-checkbox>
-    </div>-->
   </div>
+
   <md-dialog-actions align="end">
     <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
-    <button md-button color="accent">Save User</button>
+    <button md-button type="submit" ngForm color="accent">Save Animal</button>
   </md-dialog-actions>
+
 </form>
