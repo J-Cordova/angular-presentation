@@ -1,18 +1,15 @@
 <div fxLayout="column" fxFlex class="dark-theme">
 
   <md-toolbar color="primary">
+    <span fxFlex></span>
     <span>Animal Viewer</span>
     <span fxFlex></span>
   </md-toolbar>
 
   <md-sidenav-container fxFlex>
-
     <animal-sidenav [animals]="animals" (selectedAnimal)="onAnimalSelected($event)"></animal-sidenav>
-
     <animal-detail [selectedAnimal]="selectedAnimal"></animal-detail>
     <!--<animal-detail></animal-detail>-->
-
-
   </md-sidenav-container>
 
   <button md-fab (click)="openAnimalDialog()" class="fab-bottom-right">
